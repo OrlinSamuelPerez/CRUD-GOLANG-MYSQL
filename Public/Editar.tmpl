@@ -1,0 +1,21 @@
+{{define "Editar"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <section>
+        <form method="post" action="/Actualizar">
+            <input type="hidden" name="ID" id="ID" value="{{.ID}}"/>
+            <input id="name" value={{.Nombre}} name="name" type="name" placeholder="Digita el nombre" />
+            <input id="email" name="email" value={{.Correo}} placeholder="Digita tu correo" type="email"/>
+            <input type="submit" value="Actualizar"/>
+        </form>
+    </section>
+</body>
+</html>
+{{end}}
